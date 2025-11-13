@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instructor Portal - LMS</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      background-color: #f7f7f7;
+      padding: 15px;
+      border-bottom: 2px solid #ddd;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #333;
+    }
+
+    .navbar {
+      background-color: #333;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px 0;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      font-size: 16px;
+      transition: background 0.3s ease;
+    }
+
+    .navbar a:hover {
+      background-color: #575757;
+      border-radius: 4px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 20px;
+      background-color: #f8fafc;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .hero h2 {
+      font-size: 26px;
+      margin-bottom: 8px;
+      color: #222;
+    }
+
+    .hero p {
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .hero a {
+      display: inline-block;
+      background-color: #2563eb;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .hero a:hover {
+      background-color: #1e40af;
+    }
+
+    .courses {
+      text-align: center;
+      padding: 10px;
+    }
+
+    .courses h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .course-card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 15px;
+      display: inline-block;
+      max-width: 280px;
+      text-align: left;
+      background-color: #fff;
+      vertical-align: top;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .course-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+    }
+
+    .course-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .course-card h3 {
+      margin: 0;
+      color: #222;
+    }
+
+    .course-card p {
+      color: #555;
+      margin: 8px 0 12px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .course-card a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .course-card a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <header>
+      <h1>Instructor Portal</h1>
+      <p>Manage your courses and interact with your students</p>
+    </header>
+
+    <nav class="navbar">
+      <a href="newhome page1.html">Home</a>
+      <a href="lms-courses.html">Courses</a>
+      <a href="skills.html">Students</a>
+      <a href="Instructors lms.html">Instructors</a>
+      <a href="Login Page -lms.html">Login</a>
+      <a href="for develop.html">Request Form</a>
+    </nav>
+
+    <div class="container">
+      <section class="hero">
+        <h2>Welcome, Instructors</h2>
+        <p>Access your dashboard to view, update, and manage course content.</p>
+        <a href="Login Page -lms.html">Back to Login Page</a>
+      </section>
+
+      <section class="courses">
+        <h2>My Courses</h2>
+
+        <div class="course-card">
+          <img src="course1.jpg" alt="Machine Learning Basics" />
+          <h3>Machine Learning Basics</h3>
+          <p>Explore the fundamentals of machine learning and artificial intelligence.</p>
+          <a href="#">View Course</a>
+        </div>
+
+        <div class="course-card">
+          <img src="course2.jpg" alt="Web Development Essentials" />
+          <h3>Web Development Essentials</h3>
+          <p>Learn HTML, CSS, and JavaScript to start your journey as a web developer.</p>
+          <a href="#">View Course</a>
+        </div>
+
+        <div class="course-card">
+          <img src="course3.jpg" alt="Data Science Basics" />
+          <h3>Data Science Basics</h3>
+          <p>Unlock the power of data analytics and visualization tools for insights.</p>
+          <a href="#">View Course</a>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    function login() {
+      var username = document.getElementById("login-username").value;
+      var password = document.getElementById("login-password").value;
+
+      if (username === "exampleInstructor" && password === "examplePassword") {
+        alert("Login successful!");
+        // window.location.href = "dashboard.html";
+      } else {
+        alert("Login failed. Please check your credentials.");
+      }
+    }
+  </script>
+</body>
+</html>

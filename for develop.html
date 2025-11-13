@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Course Request - LMS</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: rgb(235, 238, 232);
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      background-color: #f7f7f7;
+      padding: 15px;
+      border-bottom: 2px solid #ddd;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #333;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      color: #555;
+      font-size: 14px;
+    }
+
+    .navbar {
+      background-color: #333;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px 0;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      font-size: 16px;
+    }
+
+    .navbar a:hover {
+      background-color: #575757;
+      border-radius: 4px;
+    }
+
+    .container {
+      max-width: 600px;
+      background-color: rgba(255, 255, 255, 0.9);
+      margin: 40px auto;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #222;
+    }
+
+    h4 {
+      text-align: center;
+      background-color: orange;
+      color: white;
+      padding: 8px;
+      border-radius: 6px;
+    }
+
+    h1 {
+      text-align: center;
+      font-style: oblique;
+      color: #1e1e1e;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+
+    input:focus, select:focus {
+      outline: none;
+      border-color: #2563eb;
+      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+    }
+
+    .radio-group,
+    .checkbox-group {
+      margin: 10px 0;
+    }
+
+    .radio-label,
+    .checkbox-label {
+      margin-right: 10px;
+      display: inline-block;
+      font-weight: normal;
+    }
+
+    button {
+      display: block;
+      background-color: rgb(255, 136, 0);
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 15px;
+      font-size: 16px;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e69500;
+    }
+
+    .note {
+      text-align: center;
+      color: #c00;
+      font-size: larger;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <header>
+      <h1>AVATAR</h1>
+      <p>Learn Online</p>
+    </header>
+
+    <nav class="navbar">
+      <a href="newhome page1.html">Home</a>
+      <a href="lms-courses.html">Courses</a>
+      <a href="skills.html">Students</a>
+      <a href="Instructors lms.html">Instructors</a>
+      <a href="Login Page -lms.html">Login</a>
+      <a href="for develop.html">Request Form</a>
+    </nav>
+
+    <div class="container">
+      <h2>Course Request Form</h2>
+      <h4>Looking for something else?</h4>
+      <h1>Fill this form to request your desired course</h1>
+
+      <form id="courseRequestForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="mobile">Mobile Number:</label>
+        <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required />
+
+        <h3>Gender:</h3>
+        <div class="radio-group">
+          <input type="radio" id="male" name="gender" value="male" required />
+          <label for="male" class="radio-label">Male</label>
+
+          <input type="radio" id="female" name="gender" value="female" />
+          <label for="female" class="radio-label">Female</label>
+
+          <input type="radio" id="other" name="gender" value="other" />
+          <label for="other" class="radio-label">Other</label>
+        </div>
+
+        <p class="note">Course Details</p>
+
+        <label for="course">1.1 COURSE*</label>
+        <p>Write about the course you are looking for:</p>
+        <input type="text" id="course" name="course" required />
+
+        <label for="category">1.2 SELECT*</label>
+        <div class="checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" name="category[]" value="Technical" /> Technical
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="category[]" value="Non-Technical" /> Non-Technical
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="category[]" value="Soft Skills" /> Soft Skills
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="category[]" value="Micro Degree" /> Micro Degree
+          </label>
+        </div>
+
+        <label for="related">1.3 RELATED TO*</label>
+        <select id="related" name="related" required>
+          <option value="">-- Select an option --</option>
+          <option value="Frontend">Frontend</option>
+          <option value="Backend">Backend</option>
+          <option value="Full Stack">Full Stack</option>
+          <option value="Analytics">Analytics</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("courseRequestForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("✅ Your course request has been submitted successfully!");
+      this.reset();
+    });
+  </script>
+</body>
+</html>

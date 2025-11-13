@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        nav {
+            background-color: #333;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .hero h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .courses h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 26px;
+        }
+
+        .course-card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px;
+            display: inline-block;
+            max-width: 300px;
+            vertical-align: top;
+            background-color: #fff;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .course-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .course-card h3 {
+            margin: 10px 0;
+        }
+
+        .course-card p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .course-card a {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .course-card a:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 768px) {
+            .course-card {
+                display: block;
+                width: 90%;
+                margin: 15px auto;
+            }
+
+            nav a {
+                display: block;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Course Portal</h1>
+    </header>
+
+    <nav>
+        <a href="newhome page1.html">Home</a>
+        <a href="lms-courses.html">Courses</a>
+        <a href="skills.html">Students</a>
+        <a href="Instructors lms.html">Instructors</a>
+        <a href="Login Page -lms.html">Login</a>
+        <a href="for develop.html">Request Form</a>
+    </nav>
+
+    <div class="container">
+        <section class="hero">
+            <h2>Welcome to Your Learning Journey</h2>
+            <p>Explore our high-quality courses and take your skills to the next level.</p>
+        </section>
+
+        <section class="courses">
+            <h2>Featured Courses</h2>
+
+            <div class="course-card">
+                <img src="C:/Users/suman/Dropbox/My PC (LAPTOP-5LS7CH73)/Downloads/course java 4 img.jpg" alt="Advanced JavaScript Techniques">
+                <h3>Advanced JavaScript Techniques</h3>
+                <p>Take your JavaScript skills to the next level with advanced techniques.</p>
+                <a href="Login Page -lms.html">ENROLL NOW</a>
+            </div>
+
+            <div class="course-card">
+                <img src="C:/Users/suman/Dropbox/My PC (LAPTOP-5LS7CH73)/Downloads/react-js-cpourse 5 img2.png" alt="Machine Learning Basics">
+                <h3>Machine Learning Basics</h3>
+                <p>Explore the fundamentals of machine learning and artificial intelligence.</p>
+                <a href="Login Page -lms.html">ENROLL NOW</a>
+            </div>
+
+            <div class="course-card">
+                <img src="C:/Users/suman/Dropbox/My PC (LAPTOP-5LS7CH73)/Downloads/course 6 img 1.jpg" alt="React.js Essentials">
+                <h3>React.js Essentials</h3>
+                <p>Learn the essentials of building user interfaces with React.js.</p>
+                <a href="Login Page -lms.html">ENROLL NOW</a>
+            </div>
+
+            <div class="course-card">
+                <img src="C:/Users/suman/Dropbox/My PC (LAPTOP-5LS7CH73)/Downloads/course 1 img new.png" alt="Introduction to Programming">
+                <h3>Introduction to Programming</h3>
+                <p>Learn the fundamentals of programming with this introductory course.</p>
+                <a href="Login Page -lms.html">ENROLL NOW</a>
+            </div>
+
+            <div class="course-card">
+                <img src="C:/Users/suman/Dropbox/My PC (LAPTOP-5LS7CH73)/Downloads/course2 img.png" alt="Web Development Fundamentals">
+                <h3>Web Development Fundamentals</h3>
+                <p>Master the basics of web development and build your first website.</p>
+                <a href="Login Page -lms.html">ENROLL NOW</a>
+            </div>
+
+            <div class="course-card">
+                <img src="C:/Users/suman/Dropbox/My PC (LAPTOP-5LS7CH73)/Downloads/course 3imgw.avif" alt="Data Science Basics">
+                <h3>Data Science Basics</h3>
+                <p>Unlock the world of data science and analytics with this course.</p>
+                <a href="Login Page -lms.html">ENROLL NOW</a>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

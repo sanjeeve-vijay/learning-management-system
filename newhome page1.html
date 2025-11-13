@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(235, 238, 232);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        nav {
+            background-color: #333;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 15px;
+            background-color: rgba(204, 204, 204, 0.47);
+            text-align: center;
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .course-image {
+            width: 100%;
+            max-height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            padding: 10px;
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 50%;
+            user-select: none;
+            background-color: rgba(0,0,0,0.5);
+            transform: translateY(-50%);
+        }
+
+        .prev { left: 10px; }
+        .next { right: 10px; }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        .login-signup button {
+            background-color: #333;
+            color: antiquewhite;
+            font-weight: bold;
+            border: none;
+            border-radius: 20px;
+            padding: 12px 25px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .login-signup button:hover {
+            background-color: #000;
+        }
+
+        .hero p {
+            margin: 10px 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            .prev, .next { font-size: 18px; padding: 8px; }
+            .course-image { max-height: 200px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Learn Online</h1>
+    </header>
+
+    <nav>
+        <a href="newhome page1.html">Home</a>
+        <a href="lms-courses.html">Courses</a>
+        <a href="skills.html">Students</a>
+        <a href="Instructors lms.html">Instructors</a>
+        <a href="Login Page -lms.html">Login</a>
+        <a href="for develop.html">Request Form</a>
+    </nav>
+
+    <div class="container">
+        <h2>FEATURED COURSES</h2>
+
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <img class="course-image" src="images/course1.png" alt="Course 1">
+            </div>
+            <div class="mySlides">
+                <img class="course-image" src="images/course2.png" alt="Course 2">
+            </div>
+            <div class="mySlides">
+                <img class="course-image" src="images/course3.avif" alt="Course 3">
+            </div>
+            <div class="mySlides">
+                <img class="course-image" src="images/course4.jpg" alt="Course 4">
+            </div>
+            <div class="mySlides">
+                <img class="course-image" src="images/course5.png" alt="Course 5">
+            </div>
+            <div class="mySlides">
+                <img class="course-image" src="images/course6.jpg" alt="Course 6">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <section class="hero">
+            <p>Explore our high-quality courses and take your skills to the next level.</p>
+            <h4>Login To Browse All The Content</h4>
+            <div class="login-signup">
+                <button type="button" onclick="login()">Login</button>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Slideshow
+        let slideIndex = 0;
+        showSlides();
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides() {
+            const slides = document.getElementsByClassName("mySlides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 2000);
+        }
+
+        // Dummy login function
+        function login() {
+            alert("Login functionality not implemented yet.");
+        }
+    </script>
+</body>
+</html>

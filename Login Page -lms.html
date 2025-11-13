@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LMS - Login</title>
+
+  <link rel="stylesheet" type="text/css" href="style.css" />
+
+  <style>
+    .main {
+      background-color: white;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: rgb(235, 238, 232);
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      background-color: #f7f7f7;
+      padding: 15px;
+      border-bottom: 2px solid #ddd;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #333;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      color: #555;
+      font-size: 14px;
+    }
+
+    .navbar {
+      background-color: #333;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      font-size: 16px;
+    }
+
+    .navbar a:hover {
+      background-color: #575757;
+      border-radius: 4px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 20px;
+      background-color: #cccccc78;
+    }
+
+    h3 {
+      text-align: center;
+    }
+
+    .login-signup {
+      border: none;
+      padding: 0;
+    }
+
+    .login-signup form {
+      max-width: 300px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .login-signup label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+
+    .login-signup input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    .login-signup button {
+      background-color: #333;
+      color: antiquewhite;
+      font-weight: bold;
+      border: none;
+      border-radius: 20px;
+      padding: 12px 22px;
+      width: 100%;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .login-signup button:hover {
+      background-color: #000000;
+    }
+
+    .signup-link {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .signup-link a {
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .signup-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <header>
+      <h1>AVATAR</h1>
+      <p>Online Learning Platform</p>
+    </header>
+
+    <nav class="navbar">
+      <a href="newhome page1.html">Home</a>
+      <a href="lms-courses.html">Courses</a>
+      <a href="skills.html">Students</a>
+      <a href="Instructors lms.html">Instructors</a>
+      <a href="Login Page -lms.html">Login</a>
+      <a href="for develop.html">Request Form</a>
+    </nav>
+
+    <section class="login-signup">
+      <div class="container">
+        <h3>Login or Sign Up</h3>
+
+        <!-- Login Form -->
+        <form id="login-form">
+          <label for="login-username">Username:</label>
+          <input type="text" id="login-username" name="username" required />
+
+          <label for="login-password">Password:</label>
+          <input type="password" id="login-password" name="password" required />
+
+          <button type="button" onclick="login()">Login</button>
+        </form>
+
+        <!-- Signup Form (hidden initially) -->
+        <form id="signup-form" style="display: none;">
+          <label for="new-username">New Username:</label>
+          <input type="text" id="new-username" name="new-username" required />
+
+          <label for="new-password">New Password:</label>
+          <input type="password" id="new-password" name="new-password" required />
+
+          <button type="button" onclick="signup()">Sign Up</button>
+        </form>
+
+        <div class="signup-link">
+          <p id="toggleText">Don't have an account?
+            <a href="#" onclick="showSignupForm()">Sign Up</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    function login() {
+      var username = document.getElementById("login-username").value.trim();
+      var password = document.getElementById("login-password").value.trim();
+
+      if (username === "exampleUser" && password === "examplePassword") {
+        alert("Login successful!");
+        // Redirect: window.location.href = "dashboard.html";
+      } else {
+        alert("Login failed. Check your username and password.");
+      }
+    }
+
+    function signup() {
+      var newUsername = document.getElementById("new-username").value.trim();
+      var newPassword = document.getElementById("new-password").value.trim();
+
+      if (!newUsername || !newPassword) {
+        alert("Please fill all fields.");
+        return;
+      }
+
+      alert("Registration successful! You can now log in with your new account.");
+      showLoginForm();
+    }
+
+    function showSignupForm() {
+      document.getElementById("login-form").style.display = "none";
+      document.getElementById("signup-form").style.display = "block";
+      document.getElementById("toggleText").innerHTML =
+        'Already have an account? <a href="#" onclick="showLoginForm()">Login</a>';
+    }
+
+    function showLoginForm() {
+      document.getElementById("signup-form").style.display = "none";
+      document.getElementById("login-form").style.display = "block";
+      document.getElementById("toggleText").innerHTML =
+        'Don\'t have an account? <a href="#" onclick="showSignupForm()">Sign Up</a>';
+    }
+  </script>
+</body>
+</html>

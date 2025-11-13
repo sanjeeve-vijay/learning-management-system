@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructor Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reset some default styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .hero h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .hero a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .hero a:hover {
+            background-color: #555;
+        }
+
+        .login-signup {
+            border: 1px solid #ccc;
+            padding: 25px;
+            border-radius: 8px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .login-signup h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .login-signup label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .login-signup input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        .login-signup button {
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 12px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .login-signup button:hover {
+            background-color: #555;
+        }
+
+        .courses {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .course-card {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 10px;
+            display: inline-block;
+            max-width: 250px;
+            text-align: left;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Instructor Portal</h1>
+    </header>
+
+    <nav>
+        <a href="newhome page1.html">Home</a>
+        <a href="lms-courses.html">Courses</a>
+        <a href="skills.html">Students</a>
+        <a href="Instructors lms.html">Instructors</a>
+        <a href="Login Page -lms.html">Login</a>
+        <a href="for develop.html">Request Form</a>
+    </nav>
+
+    <div class="container">
+        <section class="hero">
+            <h2>Welcome, Instructors</h2>
+            <p>Manage your courses and interact with your students.</p>
+            <a href="Instructors lms-my course.html">My Courses</a>
+        </section>
+        
+        <section class="login-signup">
+            <h3>Login</h3>
+            <form id="login-form" onsubmit="login(event)">
+                <label for="username">Username:</label>
+                <input type="text" id="login-username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="login-password" name="password" required>
+
+                <button type="submit">Login</button>
+            </form>
+        </section>
+    </div>
+
+    <script>
+        function login(event) {
+            event.preventDefault(); // Prevent form submission
+            const username = document.getElementById("login-username").value.trim();
+            const password = document.getElementById("login-password").value.trim();
+
+            // Simple authentication (for demo purposes only)
+            if (username === "exampleInstructor" && password === "examplePassword") {
+                alert("Login successful!");
+                window.location.href = "Instructors lms-my course.html"; // Redirect to dashboard
+            } else {
+                alert("Login failed. Check your username and password.");
+            }
+        }
+    </script>
+</body>
+</html>

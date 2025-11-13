@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusive Courses</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        nav {
+            background-color: #333;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        h2 {
+            text-align: center;
+            font-weight: bold;
+            color: #3e4041;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .courses-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .course-card {
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px;
+            width: 300px;
+            text-align: center;
+            background-color: #fff;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .course-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .course-card h4 {
+            color: green;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .course-card a {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .course-card a:hover {
+            background-color: #0056b3;
+        }
+
+        @media screen and (max-width: 768px) {
+            .courses-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Learn Online</h1>
+    </header>
+
+    <nav>
+        <a href="newhome page1.html">Home</a>
+        <a href="lms-courses.html">Courses</a>
+        <a href="skills.html">Students</a>
+        <a href="Instructors lms.html">Instructors</a>
+        <a href="Login Page -lms.html">Login</a>
+        <a href="for develop.html">Request Form</a>
+    </nav>
+
+    <h2>EXCLUSIVE FREE COURSES FOR SECTION K23FK</h2>
+    <p>Login with your registration number and enroll in these exclusive courses for FREE</p>
+
+    <div class="courses-container">
+        <div class="course-card">
+            <h4>FREE</h4>
+            <img src="images/course4.jpg" alt="Advanced JavaScript Techniques">
+            <h3>Advanced JavaScript Techniques</h3>
+            <p>Take your JavaScript skills to the next level with advanced techniques.</p>
+            <a href="Login Page -lms.html">ENROLL NOW</a>
+        </div>
+
+        <div class="course-card">
+            <h4>FREE</h4>
+            <img src="images/course5.png" alt="Machine Learning Basics">
+            <h3>Machine Learning Basics</h3>
+            <p>Explore the fundamentals of machine learning and artificial intelligence.</p>
+            <a href="Login Page -lms.html">ENROLL NOW</a>
+        </div>
+
+        <div class="course-card">
+            <h4>FREE</h4>
+            <img src="images/course6.jpg" alt="React.js Essentials">
+            <h3>React.js Essentials</h3>
+            <p>Learn the essentials of building user interfaces with React.js.</p>
+            <a href="Login Page -lms.html">ENROLL NOW</a>
+        </div>
+    </div>
+</body>
+</html>
